@@ -1,6 +1,7 @@
 # Changing Laravel Project Namespace
 
-Supports : Laravel 6.x, 7.x
+<!-- Supports : Laravel 6.x, 7.x -->
+Tested : Laravel 10x
 
 First we create the command with
 

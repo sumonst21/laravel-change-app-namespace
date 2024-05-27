@@ -152,6 +152,7 @@ class AppName extends Command
 		$this->setAppConfigNamespaces();
 		$this->setAuthConfigNamespace();
 		$this->setServicesConfigNamespace();
+		$this->setSanctumConfigNamespace();
 	}
 
 	/**
@@ -199,6 +200,19 @@ class AppName extends Command
 			$this->getConfigPath('services'),
 			$this->currentRoot . '\\User',
 			$this->argument('name') . '\\User'
+		);
+	}
+
+	/**
+	 * Set the Sanctum configuration namespace.
+	 */
+	protected function setSanctumConfigNamespace(): void
+	{
+		$this->replaceIn(
+			$this->getConfigPath('sanctum'),
+			$this->currentRoot . '\\Http',
+			$this->argument('name') . '\\Http'
+
 		);
 	}
 
